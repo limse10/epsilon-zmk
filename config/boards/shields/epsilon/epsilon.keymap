@@ -51,7 +51,7 @@
                     &kp Q           &kp W           &kp E           &kp R           &kp T                       &kp Y           &kp U           &kp I           &kp O           &kp P
                     &kp A           &kp S           &kp D           &kp F           &kp G                       &kp H           &kp J           &kp K           &kp L           &kp SEMI
                     &hm LSHFT Z     &hm LCTRL X     &hm LALT C      &hm LGUI V      &kp B                       &kp N           &kp M           &kp COMMA       &hm RCTRL DOT   &hm RSHFT SLASH
-                                                    &lt 1 TAB       &lt 2 SPACE     &kp ESC                     &kp BSPC        &lt 1 SPACE     &lt 2 ENTER           
+                                                    &lt 1 TAB       &lt 2 SPACE     &kp ESC                     &kp BSPC        &lt 1 SPACE     &lt 2 ENTER
             >;
         };
         number_layer {
@@ -59,15 +59,15 @@
                     &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT                   &kp CARET       &kp AMPS        &kp STAR        &kp F11         &kp F12
                     &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                      &kp N6          &kp N7          &kp N8          &kp N9          &kp N0
                     &hm LSHFT F1    &hm LCTRL F2    &hm LALT F3     &hm LGUI F4     &kp F5                      &kp F6          &kp F7          &kp F8          &hm RCTRL F9    &hm RSHFT F10
-                                                    &lt 1 TAB       &lt 2 SPACE     &kp ESC                     &kp DEL         &lt 1 SPACE     &lt 2 ENTER          
+                                                    &lt 1 TAB       &lt 2 SPACE     &kp ESC                     &kp DEL         &lt 1 SPACE     &lt 2 ENTER
             >;
         };
         symbol_layer {
             bindings = <
                     &kp TILDE       &kp W           &kp LBRC        &kp RBRC        &kp T                       &kp Y           &kp UNDER       &kp MINUS       &kp PLUS        &kp EQUAL
                     &kp GRAVE       &kp S           &kp LPAR        &kp RPAR        &kp G                       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp DQT
-                    &hm LSHFT Z     &hm LCTRL X     &hm LALT LBKT   &hm LGUI RBKT   &kp B                       &kp N           &kp M           &kp PIPE        &hm RCTRL BSLSH &hm RSHFT SQT
-                                                    &lt 1 TAB       &lt 2 SPACE     &kp ESC                     &kp DEL         &lt 1 SPACE     &lt 2 ENTER           
+                    &hm LSHFT Z     &hm LCTRL X     &hm LALT LBKT   &hm LGUI RBKT   &kp B                       &kp N           &kp M           &kp PIPE        &hm RCTRL BSLH &hm RSHFT SQT
+                                                    &lt 1 TAB       &lt 2 SPACE     &kp ESC                     &kp DEL         &lt 1 SPACE     &lt 2 ENTER
             >;
         };
                
