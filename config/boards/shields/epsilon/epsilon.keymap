@@ -19,6 +19,11 @@
      quick-release;
  };
 
+#define DEFAULT 0
+#define COLEMAK 1
+#define NUM 2
+#define SYM 3
+#define MISC 4
 
 / { 
     behaviors {
@@ -51,31 +56,7 @@
                     &kp Q           &kp W           &kp E           &kp R           &kp T                       &kp Y           &kp U           &kp I           &kp O           &kp P
                     &kp A           &kp S           &kp D           &kp F           &kp G                       &kp H           &kp J           &kp K           &kp L           &kp SEMI
                     &hm LSHFT Z     &hm LCTRL X     &hm LALT C      &hm LGUI V      &kp B                       &kp N           &kp M           &kp COMMA       &hm RCTRL DOT   &hm RSHFT SLASH
-                                                    &lt 1 TAB       &lt 2 SPACE     &kp ESC                     &kp BSPC        &lt 2 SPACE     &lt 1 ENTER
-            >;
-        };
-        number_layer {
-            bindings = <
-                    &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT                   &kp CARET       &kp AMPS        &kp STAR        &kp F11         &kp F12
-                    &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                      &kp N6          &kp N7          &kp N8          &kp N9          &kp N0
-                    &hm LSHFT F1    &hm LCTRL F2    &hm LALT F3     &hm LGUI F4     &kp F5                      &kp F6          &kp F7          &kp F8          &hm RCTRL F9    &hm RSHFT F10
-                                                    &lt 1 TAB       &lt 3 SPACE     &kp ESC                     &kp DEL         &lt 3 SPACE     &lt 1 ENTER
-            >;
-        };
-        symbol_layer {
-            bindings = <
-                    &kp TILDE       &none           &kp LBRC        &kp RBRC        &none                       &none           &kp UNDER       &kp MINUS       &kp PLUS        &kp EQUAL
-                    &kp GRAVE       &none           &kp LPAR        &kp RPAR        &none                       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp DQT
-                    &kp LSHFT       &kp LCTRL       &hm LALT LBKT   &hm LGUI RBKT   &none                       &none           &none           &kp PIPE        &hm RCTRL BSLH  &hm RSHFT SQT
-                                                    &lt 3 TAB       &lt 2 SPACE     &kp ESC                     &kp DEL         &lt 2 SPACE     &lt 3 ENTER
-            >;
-        };
-        misc_layer {
-            bindings = <
-                    &bootloader     &reset          &none           &none           &to 0                       &tog 4           &none           &none           &reset          &bootloader          
-                    &bt BT_CLR      &bt BT_PRV      &bt BT_NXT      &none           &none                       &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP    &none           &none          
-                    &none           &none           &none           &none           &none                       &none           &none           &none           &none           &none          
-                                                    &mo 3           &mo 3           &trans                      &trans          &mo 3           &mo 3
+                                                    &lt NUM TAB     &lt SYM SPACE   &kp ESC                     &kp BSPC        &lt SYM SPACE   &lt NUM ENTER
             >;
         };
         colemak_layer {
@@ -83,7 +64,31 @@
                     &kp Q           &kp W           &kp F           &kp P           &kp B                       &kp J           &kp L           &kp U           &kp Y           &kp SEMI
                     &kp A           &kp R           &kp S           &kp T           &kp G                       &kp M           &kp N           &kp E           &kp I           &kp O
                     &hm LSHFT Z     &hm LCTRL X     &hm LALT C      &hm LGUI D      &kp V                       &kp K           &kp H           &kp COMMA       &hm RCTRL DOT   &hm RSHFT SLASH
-                                                    &to 1       &to 0    &kp ESC                     &kp BSPC        &to 0     &to 1
+                                                    &lt NUM TAB     &lt SYM SPACE   &kp ESC                     &kp BSPC        &lt SYM SPACE   &lt NUM ENTER
+            >;
+        };
+        number_layer {
+            bindings = <
+                    &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT                   &kp CARET       &kp AMPS        &kp STAR        &kp F11         &kp F12
+                    &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                      &kp N6          &kp N7          &kp N8          &kp N9          &kp N0
+                    &hm LSHFT F1    &hm LCTRL F2    &hm LALT F3     &hm LGUI F4     &kp F5                      &kp F6          &kp F7          &kp F8          &hm RCTRL F9    &hm RSHFT F10
+                                                    &lt NUM TAB     &lt MISC SPACE  &kp ESC                     &kp DEL         &lt MISC SPACE  &lt NUM ENTER
+            >;
+        };
+        symbol_layer {
+            bindings = <
+                    &kp TILDE       &none           &kp LBRC        &kp RBRC        &none                       &none           &kp UNDER       &kp MINUS       &kp PLUS        &kp EQUAL
+                    &kp GRAVE       &none           &kp LPAR        &kp RPAR        &none                       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp DQT
+                    &kp LSHFT       &kp LCTRL       &hm LALT LBKT   &hm LGUI RBKT   &none                       &none           &none           &kp PIPE        &hm RCTRL BSLH  &hm RSHFT SQT
+                                                    &lt MISC TAB    &lt SYM SPACE   &kp ESC                     &kp DEL         &lt SYM SPACE   &lt MISC ENTER
+            >;
+        };
+        misc_layer {
+            bindings = <
+                    &bootloader     &reset          &none           &none           &to DEFAULT                 &tog COLEMAK    &none           &none           &reset          &bootloader          
+                    &bt BT_CLR      &bt BT_PRV      &bt BT_NXT      &none           &none                       &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP    &none           &none          
+                    &none           &none           &none           &none           &none                       &none           &none           &none           &none           &none          
+                                                    &mo MISC        &mo MISC        &trans                      &trans          &mo MISC        &mo MISC
             >;
         };
                
