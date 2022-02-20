@@ -83,7 +83,7 @@
                     &kp Q           &kp W           &kp F           &kp P           &kp B                       &kp J           &kp L           &kp U           &kp Y           &kp SEMI
                     &kp A           &kp R           &kp S           &kp T           &kp G                       &kp M           &kp N           &kp E           &kp I           &kp O
                     &hm LSHFT Z     &hm LCTRL X     &hm LALT C      &hm LGUI D      &kp V                       &kp K           &kp H           &kp COMMA       &hm RCTRL DOT   &hm RSHFT SLASH
-                                                    &lt 1 TAB       &lt 2 SPACE     &kp ESC                     &kp BSPC        &lt 2 SPACE     &lt 1 ENTER
+                                                    &mo 1           &mo 2           &kp ESC                     &kp BSPC        &lt 2 SPACE     &lt 1 ENTER
             >;
         };
                
