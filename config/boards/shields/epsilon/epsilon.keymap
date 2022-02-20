@@ -64,18 +64,18 @@
         };
         symbol_layer {
             bindings = <
-                    &kp TILDE       &kp W           &kp LBRC        &kp RBRC        &kp T                       &kp Y           &kp UNDER       &kp MINUS       &kp PLUS        &kp EQUAL
-                    &kp GRAVE       &kp S           &kp LPAR        &kp RPAR        &kp G                       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp DQT
-                    &hm LSHFT Z     &hm LCTRL X     &hm LALT LBKT   &hm LGUI RBKT   &kp B                       &kp N           &kp M           &kp PIPE        &hm RCTRL BSLH &hm RSHFT SQT
+                    &kp TILDE       &none           &kp LBRC        &kp RBRC        &none                       &none           &kp UNDER       &kp MINUS       &kp PLUS        &kp EQUAL
+                    &kp GRAVE       &none           &kp LPAR        &kp RPAR        &none                       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp DQT
+                    &kp LSHFT       &kp LCTRL       &hm LALT LBKT   &hm LGUI RBKT   &none                       &none           &none           &kp PIPE        &hm RCTRL BSLH  &hm RSHFT SQT
                                                     &lt 3 TAB       &lt 2 SPACE     &kp ESC                     &kp DEL         &lt 2 SPACE     &lt 3 ENTER
             >;
         };
         misc_layer {
             bindings = <
-                    &bootloader     &reset          &trans          &trans          &to 0                       &to 4           &trans          &trans          &reset          &bootloader          
-                    &bt BT_CLR      &bt BT_PRV      &bt BT_NXT      &trans          &trans                      &kp C_MUTE      &kp C_VOL_DN  &kp C_VOL_UP    &trans          &trans          
-                    &trans          &trans          &trans          &trans          &trans                      &trans          &trans          &trans          &trans          &trans          
-                                                    &lt 3 SPACE     &lt 3 SPACE     &trans                      &trans          &lt 3 SPACE     &lt 3 SPACE
+                    &bootloader     &reset          &none           &none           &to 0                       &to 4           &none           &none           &reset          &bootloader          
+                    &bt BT_CLR      &bt BT_PRV      &bt BT_NXT      &none           &none                       &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP    &none           &none          
+                    &none           &none           &none           &none           &none                       &none           &none           &none           &none           &none          
+                                                    &mo 3           &mo 3           &trans                      &trans          &mo 3           &mo 3
             >;
         };
         colemak {
