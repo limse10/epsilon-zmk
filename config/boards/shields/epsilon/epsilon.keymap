@@ -21,9 +21,10 @@
 
 #define DEFAULT 0
 #define COLEMAK 1
-#define NUM 2
-#define SYM 3
-#define MISC 4
+#define GAMING 2
+#define NUM 3
+#define SYM 4
+#define MISC 5
 
 / { 
     behaviors {
@@ -59,6 +60,14 @@
                                                     &lt NUM TAB     &lt SYM SPACE   &kp ESC                     &kp BSPC        &lt SYM SPACE   &lt NUM ENTER
             >;
         };
+        gaming_layer {
+            bindings = <
+                    &kp TAB         &kp Q           &kp W           &kp E           &kp R                       &kp T           &kp Y           &kp U           &kp I           &kp F3
+                    &kp LSHIFT      &kp A           &kp S           &kp D           &kp F                       &kp G           &kp H           &kp J           &kp K           &kp L
+                    &kp LCTRL       &kp Z           &kp X           &kp C           &kp V                       &kp B           &kp N           &kp M           &kp DOT         &kp SLASH
+                                                    &kp TAB         &kp SPACE       &kp ESC                     &kp BSPC        &lt SYM SPACE   &lt NUM ENTER
+            >;
+        };
         colemak_layer {
             bindings = <
                     &kp Q           &kp W           &kp F           &kp P           &kp B                       &kp J           &kp L           &kp U           &kp Y           &kp SEMI
@@ -85,7 +94,7 @@
         };
         misc_layer {
             bindings = <
-                    &bootloader     &reset          &none           &none           &to DEFAULT                 &tog COLEMAK    &none           &none           &reset          &bootloader          
+                    &bootloader     &reset          &none           &none           &to DEFAULT                 &tog COLEMAK    &tog GAMING     &none           &reset          &bootloader          
                     &bt BT_CLR      &bt BT_PRV      &bt BT_NXT      &none           &none                       &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP    &none           &none          
                     &none           &none           &none           &none           &none                       &none           &none           &none           &none           &none          
                                                     &mo MISC        &mo MISC        &trans                      &trans          &mo MISC        &mo MISC
