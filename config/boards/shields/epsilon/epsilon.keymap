@@ -12,7 +12,7 @@
 
 &mt {
     tapping-term-ms = <200>;
-    flavor = "tap-preferred";
+    flavor = "hold-preferred";
  };
 &sk {
      release-after-ms = <2000>;
@@ -34,18 +34,17 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick_tap_ms = <0>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
 
-	    td: tapdance {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAPDANCE";
-            #binding-cells = <2>;
-            tapping-term-ms = <190>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <NUM SYM>;
+            then-layer = <MISC>;
         };
     };
 
@@ -60,14 +59,6 @@
                                                     &lt NUM TAB     &lt SYM SPACE   &kp ESC                     &kp BSPC        &lt SYM SPACE   &lt NUM ENTER
             >;
         };
-        gaming_layer {
-            bindings = <
-                    &kp TAB         &kp Q           &kp W           &kp E           &kp R                       &kp T           &kp Y           &kp U           &kp I           &kp F3
-                    &kp LSHIFT      &kp A           &kp S           &kp D           &kp F                       &kp G           &kp H           &kp J           &kp K           &kp L
-                    &kp LCTRL       &kp Z           &kp X           &kp C           &kp V                       &kp B           &kp N           &kp M           &kp DOT         &kp SLASH
-                                                    &kp TAB         &kp SPACE       &kp ESC                     &kp BSPC        &lt SYM SPACE   &lt NUM ENTER
-            >;
-        };
         colemak_layer {
             bindings = <
                     &kp Q           &kp W           &kp F           &kp P           &kp B                       &kp J           &kp L           &kp U           &kp Y           &kp SEMI
@@ -76,12 +67,20 @@
                                                     &lt NUM TAB     &lt SYM SPACE   &kp ESC                     &kp BSPC        &lt SYM SPACE   &lt NUM ENTER
             >;
         };
+        gaming_layer {
+            bindings = <
+                    &kp TAB         &kp Q           &kp W           &kp E           &kp R                       &kp T           &kp Y           &kp U           &kp I           &kp F3
+                    &kp LSHIFT      &kp A           &kp S           &kp D           &kp F                       &kp G           &kp H           &kp J           &kp K           &kp L
+                    &kp LCTRL       &kp Z           &kp X           &kp C           &kp V                       &kp B           &kp N           &kp M           &kp DOT         &kp SLASH
+                                                    &kp TAB         &kp SPACE       &kp ESC                     &kp BSPC        &lt SYM SPACE   &lt NUM ENTER
+            >;
+        };
         number_layer {
             bindings = <
                     &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT                   &kp CARET       &kp AMPS        &kp STAR        &kp F11         &kp F12
                     &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                      &kp N6          &kp N7          &kp N8          &kp N9          &kp N0
-                    &hm LSHFT F1    &hm LCTRL F2    &hm LALT F3     &hm LGUI F4     &kp F5                      &kp F6          &kp F7          &kp F8          &hm RCTRL F9    &hm RSHFT F10
-                                                    &lt NUM TAB     &lt MISC SPACE  &kp ESC                     &kp DEL         &lt MISC SPACE  &lt NUM ENTER
+                    &hm LSHFT F1    &hm LCTRL F2    &hm LALT F3     &hm LGUI F4     &kp F5                      &kp F6          &kp F7          &kp COMMA       &hm RCTRL DOT   &hm RSHFT F10
+                                                    &lt NUM TAB     &lt SYM SPACE   &kp ESC                     &kp DEL         &lt SYM SPACE   &lt NUM ENTER
             >;
         };
         symbol_layer {
@@ -89,7 +88,7 @@
                     &kp TILDE       &none           &kp LBRC        &kp RBRC        &none                       &none           &kp UNDER       &kp MINUS       &kp PLUS        &kp EQUAL
                     &kp GRAVE       &none           &kp LPAR        &kp RPAR        &none                       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp DQT
                     &kp LSHFT       &kp LCTRL       &hm LALT LBKT   &hm LGUI RBKT   &none                       &none           &none           &kp PIPE        &hm RCTRL BSLH  &hm RSHFT SQT
-                                                    &lt MISC TAB    &lt SYM SPACE   &kp ESC                     &kp DEL         &lt SYM SPACE   &lt MISC ENTER
+                                                    &lt NUM TAB     &lt SYM SPACE   &kp ESC                     &kp DEL         &lt SYM SPACE   &lt NUM ENTER
             >;
         };
         misc_layer {
