@@ -67,7 +67,7 @@
             bindings = <
                     &none    &kp TILDE       &none           &kp LBRC        &kp RBRC        &none                       &none           &kp UNDER       &kp MINUS       &kp PLUS        &kp EQUAL          &none
                     &none    &kp GRAVE       &none           &kp LPAR        &kp RPAR        &none                       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp DQT            &none
-                    &none    &kp LSHFT       &kp LCTRL       &hm LALT LBKT   &hm LGUI RBKT   &none                       &none           &none           &kp PIPE        &hm RCTRL BSLH  &hm RSHFT SQT      &none
+                    &none    &kp LSHFT       &kp LCTRL       &kp LBKT        &kp RBKT        &none                       &none           &none           &kp PIPE        &hm RCTRL BSLH  &hm RSHFT SQT      &none
                                                     &lt NUM TAB     &lt SYM SPACE   &kp ESC                     &kp DEL         &lt SYM SPACE   &lt NUM ENTER
             >;
         };
