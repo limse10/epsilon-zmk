@@ -21,6 +21,7 @@
 #define NUM 1
 #define SYM 2
 #define MISC 3
+#define SHORT 4
 
 / {
     behaviors {
@@ -33,7 +34,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-
     };
 
     conditional_layers {
@@ -52,7 +52,7 @@
                     &none    &kp Q           &kp W           &kp E           &kp R           &kp T                       &kp Y           &kp U           &kp I           &kp O           &kp P              &none
                     &none    &kp A           &kp S           &kp D           &kp F           &kp G                       &kp H           &kp J           &kp K           &kp L           &kp SEMI           &none
                     &none    &hm LSHFT Z     &hm LCTRL X     &hm LALT C      &hm LGUI V      &kp B                       &kp N           &kp M           &kp COMMA       &hm RCTRL DOT   &hm RSHFT SLASH    &none
-                                                    &lt NUM TAB     &lt SYM SPACE   &kp ESC                     &kp BSPC        &lt SYM SPACE   &lt NUM ENTER
+                                                             &lt NUM TAB     &lt SHORT SPACE &kp ESC                     &kp BSPC        &lt SYM SPACE   &lt NUM ENTER
             >;
         };
         number_layer {
@@ -60,7 +60,7 @@
                     &none    &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT                   &kp CARET       &kp AMPS        &kp STAR        &kp F11         &kp F12            &none
                     &none    &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                      &kp N6          &kp N7          &kp N8          &kp N9          &kp N0             &none
                     &none    &hm LSHFT F1    &hm LCTRL F2    &hm LALT F3     &hm LGUI F4     &kp F5                      &kp F6          &kp F7          &kp COMMA       &hm RCTRL DOT   &hm RSHFT F10      &none
-                                                    &lt NUM TAB     &lt SYM SPACE   &kp ESC                     &kp DEL         &lt SYM SPACE   &lt NUM ENTER
+                                                             &lt NUM TAB     &lt SYM SPACE   &kp ESC                     &kp DEL         &lt SYM SPACE   &lt NUM ENTER
             >;
         };
         symbol_layer {
@@ -68,7 +68,7 @@
                     &none    &kp TILDE       &none           &kp LBRC        &kp RBRC        &none                       &none           &kp UNDER       &kp MINUS       &kp PLUS        &kp EQUAL          &none
                     &none    &kp GRAVE       &none           &kp LPAR        &kp RPAR        &none                       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp DQT            &none
                     &none    &kp LSHFT       &kp LCTRL       &kp LBKT        &kp RBKT        &none                       &none           &none           &kp PIPE        &hm RCTRL BSLH  &hm RSHFT SQT      &none
-                                                    &lt NUM TAB     &lt SYM SPACE   &kp ESC                     &kp DEL         &lt SYM SPACE   &lt NUM ENTER
+                                                             &lt NUM TAB     &lt SYM SPACE   &kp ESC                     &kp DEL         &lt SYM SPACE   &lt NUM ENTER
             >;
         };
         misc_layer {
@@ -76,9 +76,16 @@
                     &none    &bootloader     &sys_reset      &none           &none           &to DEFAULT                 &none           &none           &none           &sys_reset      &bootloader        &none
                     &none    &bt BT_CLR      &bt BT_PRV      &bt BT_NXT      &none           &none                       &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP    &none           &none              &none
                     &none    &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                &none           &none           &none           &none           &none              &none
-                                                    &mo MISC        &mo MISC        &trans                      &trans          &mo MISC        &mo MISC
+                                                             &mo MISC        &mo MISC        &trans                      &trans          &mo MISC        &mo MISC
             >;
         };
-               
+        shortcut_layer {
+            bindings = <
+                    &none    &kp LA(Q)       &none           &none           &none           &none                       &none           &none           &none           &none           &none              &none
+                    &none    &kp LA(N1)      &kp LA(N2)      &kp LA(N3)      &kp LA(N4)      &kp LA(N5)                  &kp LA(H)       &kp LA(J)       &kp LA(K)       &kp LA(L)       &none              &none
+                    &none    &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI        &none                       &none           &none           &none           &kp RCTRL       &kp RSHFT          &none
+                                                             &kp TAB         &kp LALT        &kp LA(ESC)                 &kp LA(BSPC)    &kp LA(SPACE)   &kp LA(ENTER)
+            >;
+        };
 	};
 };
